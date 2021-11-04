@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Cognitive tasks and reaction times</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x0ba7c8badca4eee8a290f2cfe6ec6e2","expires":14}</script>
+    <script src="libs/himalaya/himalaya.js"></script>
+    <script src="libs/js-cookie/js.cookie.js"></script>
+    <link href="libs/editable/editable.css" rel="stylesheet" />
+    <script src="libs/editable/editable.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+
+class:  center, middle
+
+
+
+
+
+
+&lt;img style="position: absolute; top: 0; right: 0; border: 0; margin: 10px 50px" src="Images/logo_uni.jpg" width = "250px" &gt;
+
+
+## Bayesian statistics 1
+
+&lt;/br&gt;
+
+
+&lt;/br&gt;
+&lt;/br&gt;
+
+
+.large[Alessandro Tomassini | Experimental Psychology NTS | 20 October 2021]
+
+
+
+
+
+
+
+---
+
+
+.center[&lt;img src = "Images/1.png" width = "500px"&gt;]
+
+&lt;/br&gt;
+
+# "Bizarre condition"...or a consequence of optimal Bayesian inference?
+
+
+---
+
+
+&lt;img src = "Images/2.png" style="position: absolute; top: 0; left: 0; border: 0; margin: 440px 570px; width: 50.5%"/&gt;
+
+---
+
+.pull-left[.b--green.ba.bw2.ma2.pa4.shadow-1[The **prior**  probability distribution  represents 
+prior knowledge of our "statistical model" of the phone]]
+
+&lt;img src = "Images/3.png" style="position: absolute; top: 0; left: 0; border: 0; margin: 290px 570px; width: 50.5%"/&gt;
+
+---
+.pull-left[.b--red.ba.bw2.ma2.pa4.shadow-1[The **likelihood**: 
+a  probabilistic representation  of the "data", given an underlying statistical model ]]
+
+
+&lt;img src = "Images/4.png" style="position: absolute; top: 0; left: 0; border: 0; margin: 135px 570px; width: 50.5%"/&gt;
+
+---
+&lt;img src = "Images/5.png" style="position: absolute; top: 0; left: 0; border: 0; margin: 135px 570px; width: 50.5%"/&gt;
+
+.pull-left[.b--blue.ba.bw2.ma2.pa4.shadow-1[The **posterior**  probability: 
+
+the probability of  our   model, given  the data]]
+
+---
+
+&lt;img src = "Images/6.png" style="position: absolute; top: 0; left: 0; border: 0; margin: 135px 570px; width: 50.5%"/&gt;
+
+.pull-left[.b--gray.ba.bw2.ma2.pa4.shadow-1[If we have a relatively precise  (i.e. narrow) prior  and 
+imprecise (i.e. broad) likelihood...]]
+
+---
+.center[#**Bayesian inference**]
+
+##Estimate the *probability*  of our  model, given the data:
+
+.center[&lt;img src = "Images/8.png" style = "width: 60%"/&gt; ]
+
+&lt;/br&gt;
+.b--gray.ba.bw2.ma2.pa4.shadow-1[
+* Explicitly represents uncertainty in inference, by incorporating prior knowledge and assumptions.
+* Provides directly interpretable and  continous measure of evidence.
+* Is not limited to null hypothesis testing.
+]
+---
+.center[#**Bayesian parameter estimation**]
+
+&lt;/br&gt;
+
+.pull-right[&lt;img src = "Images/9.png" style = "width: 100%"/&gt; ]
+
+&lt;/br&gt;
+
+---
+.center[#**Bayesian parameter estimation**]
+
+&lt;/br&gt;
+.pull-left[* We start with a prior distribution over the 
+candidate values of `\\(\beta, P(\beta)\\)`.
+
+* Now we assign low probability to extreme coefficients,
+e.g., `\\(|\beta| \geq 5\\)`.
+]
+.pull-right[&lt;img src = "Images/10.png" style = "width: 1000%"/&gt; ]
+
+&lt;/br&gt;
+
+---
+.center[#**Bayesian parameter estimation**]
+
+&lt;/br&gt;
+.pull-left[* We then examine the probability of
+our data given  a particular value of `\\(\beta, P(Data|\beta)\\)`.
+
+* In this case, the probability of the data
+seems maximised when `\\(\beta \approx 5\\)`.
+]
+.pull-right[&lt;img src = "Images/11.png" style = "width: 1000%"/&gt; ]
+
+&lt;/br&gt;
+
+---
+.center[#**Bayesian parameter estimation**]
+
+&lt;/br&gt;
+.pull-left[* The posterior tells us the
+probability of`\\(\beta\\)` given the data, i.e., `\\(\beta, P(\beta|Data)\\)`.
+
+* Here, it is quite similar to the likelihood
+because our prior was rather vague (i.e. broad).
+]
+.pull-right[&lt;img src = "Images/12.png" style = "width: 1000%"/&gt; ]
+
+&lt;/br&gt;
+
+---
+
+&lt;/br&gt;
+
+&lt;/br&gt;
+
+&lt;/br&gt;
+
+&lt;/br&gt;
+
+&lt;/br&gt;
+
+&lt;/br&gt;
+
+.center[&lt;img src = "Images/13.png" style = "width: 70%"/&gt; ]
+
+&lt;/br&gt;
+
+---
+
+&lt;/br&gt;
+
+Notice how the `\(\color{blue}{\text{posterior}}\)` "shrinks" towards the `\(\color{green}{\text{prior}}\)`! 
+
+&lt;/br&gt;
+
+&lt;/br&gt;
+
+&lt;/br&gt;
+
+&lt;/br&gt;
+
+.center[&lt;img src = "Images/14.png" style = "width: 70%"/&gt; ]
+
+&lt;/br&gt;
+
+---
+.center[#**The immportance of priors**]
+
+&lt;/br&gt;
+
+## How can we justify that differnt prior assumptions yield different (posterior) inferences about the same data?
+
+&lt;/br&gt;
+.b--gray.ba.bw2.ma2.pa4.shadow-1[
+* Priors are sometimes *necessary* for model convergence
+
+* Priors are not necessarily more "subjective" than other aspects of the statistical momdel
+
+* Priors allow for explicity building on  previous research
+
+* Priors put extremely unlikely data into perspective
+]
+
+---
+.center[#**The immportance of priors**]
+
+&lt;/br&gt;
+.center[&lt;img src = "Images/15.png" style = "width: 60%"/&gt; ]
+
+---
+.center[#**Bayesian hypothesis testing**]
+&lt;/br&gt;
+.pull-left[* So far we have looked at parameter
+*estimation*, but we could also test  against a
+critical value.
+
+  Null hypothesis: `\\(\beta=0\\)` 
+
+  Alt. hypothesis: `\\(\beta\neq 0\\)`.
+]
+.pull-right[&lt;img src = "Images/16.png" style = "width: 1000%"/&gt; ]
+
+&lt;/br&gt;
+
+---
+
+
+.center[#**Bayesian hypothesis testing**]
+&lt;/br&gt;
+.pull-left[* There is a clear decrease in density
+from the prior to posterior at the null value.
+
+* This suggests that, after observing the data,
+the null value is less likely.
+]
+.pull-right[&lt;img src = "Images/17.png" style = "width: 1000%"/&gt; ]
+
+&lt;/br&gt;
+
+---
+
+.center[#**Bayesian hypothesis testing**]
+&lt;/br&gt;
+.pull-left[
+
+    `\\(P(\beta=0) = 0.40\\)`, 
+    &lt;/br&gt;
+    `\\(P(\beta=0|Data) = 0.08\\)`
+    
+The ratio between  these numbers 
+is the **Bayes Factor**. It represents
+how our  beliefs should change, in light
+of the data:
+
+ `\\(BF_{alt} = \frac{0.40}{0.08} = 4.71\\)`
+
+That is, the data are 4.71 times more likely
+under the alternative hypothesis than the null.
+
+ `\\(BF_{null} = \frac{0.08}{0.40} = 0.21\\)`
+
+
+]
+.pull-right[&lt;img src = "Images/18.png" style = "width: 1000%"/&gt; ]
+
+&lt;/br&gt;
+---
+.center[#**Bayes Factor**]
+
+
+.center[&lt;img src = "Images/19.png" style = "width: 80%"/&gt; ]
+
+&lt;/br&gt;
+
+The Bayes Factor represents the extent to which the data update the *relative plausibility* of the competing hypotheses
+
+
+
+.center[&lt;img src = "Images/20.png" style = "width: 30%"/&gt; ]
+
+---
+
+.center[#**Bayes Factor**]
+
+
+&lt;/br&gt;
+.pull-left[
+.b--gray.ba.bw2.ma2.pa4.shadow-1[
+* Quantifies *evidence*, both for alternative and null hypotheses
+
+* Does not  force all-or-none decisions
+
+* Can distinguish between  **absence of evidence** and **evidence absence**
+]]
+
+
+.pull-right[&lt;img src = "Images/21.png" style = "width: 100%"/&gt;]
+
+---
+.center[#**Parameter estimation *as* hypothesis testing**]
+
+&lt;/br&gt;
+.pull-left[* Instead of Bayes Factor hypothesis testing,
+we can also look directly at the posterior parameter  of interest.
+
+* To what extent are values of interest, such as `\\(\beta = 0\\)`, among the 
+most plausible values of the posterior?
+
+]
+.pull-right[&lt;img src = "Images/22.png" style = "width: 1000%"/&gt; ]
+
+&lt;/br&gt;
+
+
+---
+
+.center[#**Parameter estimation *as* hypothesis testing**]
+
+&lt;/br&gt;
+.pull-left[* Here, the 95% highest density interval (HDI) of the posterior does not include 0.
+]
+.pull-right[&lt;img src = "Images/23.png" style = "width: 1000%"/&gt; ]
+
+&lt;/br&gt;
+
+
+---
+
+.center[#**Parameter estimation *as* hypothesis testing**]
+
+&lt;/br&gt;
+.pull-left[* Rather than a single critical value, you could also pre-specify a *region* of  practical equivalence (ROPE) to the null.
+]
+.pull-right[&lt;img src = "Images/24.png" style = "width: 1000%"/&gt; ]
+
+&lt;/br&gt;
+
+
+---
+
+.center[#**Parameter estimation *as*  hypothesis testing**]
+
+&lt;/br&gt;
+.pull-left[* If the 95% HDI falls entirely **outside** the ROPE, we reject the null
+
+* If the 95% HDI falls entirely  **inside** the ROPE, we accept the null
+
+* In this  case, we can neither accept nor reject teh null as there is some  overlap with the ROPE
+
+]
+.pull-right[&lt;img src = "Images/25.png" style = "width: 1000%"/&gt; ]
+
+&lt;/br&gt;
+
+
+---
+
+# Further Resources
+
+Wagenmakers, EJ., Marsman, M., Jamil, T. et al. Bayesian inference for psychology. Part I: Theoretical advantages and practical ramifications. Psychon Bull Rev 25, 35–57 (2018). https://doi.org/10.3758/s13423-017-1343-3
+
+
+Wagenmakers, EJ., Love, J., Marsman, M. et al. Bayesian inference for psychology. Part II: Example applications with JASP. Psychon Bull Rev 25, 58–76 (2018). 
+https://doi.org/10.3758/s13423-017-1323-7
+
+
+Etz, A., Vandekerckhove, J. Introduction to Bayesian Inference for Psychology. Psychon Bull Rev 25, 5–34 (2018). 
+https://doi.org/10.3758/s13423-017-1262-3
+
+
+Check out this Youtube series from Mike Lawrence (mostly oriented on R) [Youtube Channel](https://www.youtube.com/watch?v=bR2YUD5EW3w&amp;list=PLu77iLvsj_GNmWqDdX-26kZ56dCZqkzBO) 
+
+
+---
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
