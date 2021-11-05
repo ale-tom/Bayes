@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Cognitive tasks and reaction times</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xc84d0ba761e4b6f9c696f7b0ce0730e","expires":14}</script>
+    <script src="libs/himalaya/himalaya.js"></script>
+    <script src="libs/js-cookie/js.cookie.js"></script>
+    <link href="libs/editable/editable.css" rel="stylesheet" />
+    <script src="libs/editable/editable.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+
+class:  center, middle
+
+
+
+
+
+
+&lt;img style="position: absolute; top: 0; right: 0; border: 0; margin: 10px 50px" src="Images/logo_uni.jpg" width = "250px" &gt;
+
+
+## Bayesian statistics 2
+
+&lt;/br&gt;
+
+
+&lt;/br&gt;
+&lt;/br&gt;
+
+
+
+
+.large[Alessandro Tomassini | Experimental Psychology NST | 27 October 2021]
+
+
+
+
+
+
+
+---
+# Last week
+
+* ### Bayesian hypothesis testing: Bayes Factor
+
+.center[&lt;img src = "Images2/2.png" width = 90%&gt;]
+
+* ### Bayesian parameter estimation: Posterior distribution
+
+.center[&lt;img src = "Images2/3.png" width = 60%&gt;]
+
+---
+class:  center, middle
+
+.center[# Example applications of Bayesian inference in psychology]
+
+&lt;/br&gt;
+
+&lt;/br&gt;
+
+.center[&lt;img src = "Images2/4.png" width = 30%&gt;]
+
+
+---
+class:  center, middle
+
+.center[# Example1:    **Group comparison**]
+
+
+---
+## Data: Effects of oxytocin  on self-reported spirituality  
+(Van Cappelen et al., 2016)
+
+
+
+.pull-left[
+* ###Oxitocine is thought to be involved in socio-affective  processes (empathy, altruism, bonding). Does this  extend to *spiritual* interconnection?
+
+* ###Experimental manipulation: intranasal oxytocin or placebo
+
+* ###Primary analysis: group difference in spirituality questionnaire scores
+]
+
+.pull-right[&lt;img src = "Images2/5.png" style = "width: 60%"/&gt; ]
+
+---
+## Step 1: Hypotheses and statistical model
+
+.pull-left[ **Null hypothesis**  (`\\(H_{0}\\)`)    &lt;/br&gt;  &lt;/br&gt; There is no effect of oxytocin on self-reported spirituality (`\\(\delta=0\\)`) ]
+
+.pull-right[ **Alternative hypothesis**  (`\\(H_{10}\\)`)    &lt;/br&gt;  &lt;/br&gt; There is *an* effect of oxytocin on self-reported spirituality (`\\(\delta\neq 0\\)`) ]
+
+&lt;/br&gt;
+
+&lt;/br&gt;
+
+&lt;/br&gt;
+
+&lt;/br&gt;
+
+.center[where effect size `\\(\delta = \frac{\mu_{oxy}-\mu_pcb}{\sigma}\\)`]
+
+&lt;/br&gt;
+
+.center[.b--gray.ba.bw2.ma2.pa4.shadow-1[Test for difference between two (independent) groups
+on outcomme of  interest: **independent sample t-test**]]
+
+
+---
+## Step 2: Descriptives
+
+.pull-left[&lt;img src = "Images2/6.png" style = "width: 70%"/&gt; ]
+.pull-rigth[&lt;img src = "Images2/7.png" style = "width: 35%"/&gt; ]
+
+
+---
+## Step 3: Running the analysis (frequentist)
+
+&lt;/br&gt;
+
+.center[&lt;img src = "Images2/8.png" style = "width: 70%"/&gt; ]
+
+&lt;/br&gt;
+
+.center[.b--gray.ba.bw2.ma2.pa4.shadow-1["Although ratings of spirituality were slightly increased 
+after administration of oxytocin (M  - 3.84, SD = 2.26) compared to placebo (M = 3.25, SD = 2.34), this effect was not statistically significant [t(76)=1.14, *p*=0.26]"]]
+
+---
+## Discussion
+
+.center[.b--gray.ba.bw2.ma2.pa4.shadow-1["t(76) = 1.14, p=0.26]]
+
+&lt;/br&gt;
+
+&lt;/br&gt;
+
+* ###Failing to reject the null hypothesis  \\( \neq \\) accepting the null hypothesis
+
+* ###The *p* value  \\( \neq \\) probability of the null hypothesis
+
+* ###Ammbiguity: is there truly no effect (**true negative**)? Or is there a true effect that we failed to  detect (**false negative**)? Or is there not much evidence either way?
+---
+## Step 3 revisited: Running the Bayesian analysis
+
+.center[&lt;img src = "Images2/9.png" style = "width: 90%"/&gt; ]
+
+
+
+.center[.b--gray.ba.bw2.ma2.pa4.shadow-1["Bayes Factor analysis indicated that the data were 2.44 times more likely under the null hypothesis than the alternative hypothesis (BF01 = 2.44), with a posterior median effect size of 0.22 and a 95% credible interval range of -0.17 to 0.64. The BF value was relatively close to 1, indicating data insensitivity – that is, the current data support neither hypothesis."
+]]
+
+---
+## Discussion
+
+&lt;/br&gt;
+
+.center[`\\(BF_{01} =  2.44; P(\delta|Data)=0.22\\)`, 95% CI:[-0.17, 0.64]]
+
+
+
+&lt;/br&gt;
+
+* ###Thus, based on  this particular dataset, we don't have much evidence for either hypotheses (at least now we are sure the data do not provide clear evidence in favour of the null).
+
+* ###The posterior distribution of effect size gives us an idea of the *uncertainty* about the effect of oxytocine.
+
+&lt;/br&gt;
+
+---
+## What about the prior?
+&lt;/br&gt;
+.pull-left[* We used a "default" prior, with the scale parameter (i.e. dispersion) set at `\\(\frac{\sqrt 2}{2} = 0.71\\)`
+
+&lt;/br&gt;
+
+* The 50% highest density interval of this "default" prior ranges from -0.71 to 0.71 (i.e. 50% confident a priori that the effect size will lie between -0.71 and 0.71).
+
+&lt;/br&gt;
+
+* Is this a reasonable prior? Drug manipulations in healthy populations are usually quite subtle.
+]
+.pull-right[&lt;img src = "Images2/10.png" style = "width: 100%"/&gt; ]
+
+&lt;/br&gt;
+
+---
+## What about the prior?
+
+
+.center[&lt;img src = "Images2/11.png" style = "width: 90%"/&gt; ]
+
+&lt;/br&gt;
+
+####.center[Discuss: Why does `\\(BF_{01}\\)` increases with a wider prior on the parameter (here, effect size)?
+]
+
+---
+## What about the prior?
+
+&lt;/br&gt;
+
+.pull-left[* To examine the robustness of the Bayes Factor, we can plot the results of different prior settings.
+
+&lt;/br&gt;
+
+* With our  data, the specifics of the prior have no substantial effect on our inference.
+]
+.pull-right[&lt;img src = "Images2/12.png" style = "width: 100%"/&gt; ]
+
+&lt;/br&gt;
+
+---
+## What about the prior?
+.pull-left[Since Bayes Factor analysis is only continget on *your observed data*, you can keep re-running the analysis as your sample size (n) increases.
+]
+.pull-right[&lt;img src = "Images2/13.png" style = "width: 100%"/&gt; ]
+
+
+.center[.b--gray.ba.bw2.ma2.pa4.shadow-1[Discuss: Why is this kind of sequential analysis not possible in a frequentist framework?
+]]
+
+---
+
+class:  center, middle
+
+.center[# Example2:    **Linear regression**]
+
+---
+## Data: Predicting the success of freshmen in a coputer science major  
+(Campbell &amp; McCabe, 1984)
+
+* #### Large (N=224) dataset about academmic performance:
+  * ####Grade point average (GPA) after 1 year of undergrad CompSci
+  * ####Average high school grades for maths, science, and English
+  * ####Scholastic aptitude test (SAT) scores for maths and verbal knowledge
+
+* #### **Substantive question**: Which measures of academic success in high school best predict academic success in university? Does SAT help predict academic success, *above and beyond* high school grades?
+
+---
+
+&lt;/br&gt;
+
+.pull-left[&lt;img src = "Images2/14.png" style = "width: 100%"/&gt; ]
+.pull-right[ 
+
+&lt;/br&gt;
+
+* Note the positive manifold - All variables are slightly different measures of the same thing: Academic performance.
+
+&lt;/br&gt;
+
+* For simplicity, we will start by looking at the relationship between high school mathematics grades (hsm) and university GPA]
+
+
+
+---
+## Hypotheses and  statistical model
+
+####Null hypothesis: There is no relationship between high school maths and university  GPA `$$H_0:\beta_{hsm}=0$$`
+
+####Alternative hypothesis: There is *a* relationship between high school maths and university  GPA `$$H_1:\beta_{hsm}\neq0$$`
+
+####Where the regression coefficient beta_hsm represents the expected change in university GPA for a given change in high school maths:  
+
+
+
+`$$\beta_{0}+\beta_{hsm}*x_{hsm}+\epsilon$$`
+&lt;/br&gt;
+
+.center[.b--gray.ba.bw2.ma2.pa4.shadow-1[Test for the relationship between a continous outcome and  one continuous predictor: **simple linear regression**
+]]
+
+
+---
+## Frequentist simple regression
+
+.center[&lt;img src = "Images2/15.png" style = "width: 100%"/&gt; ]
+
+
+&lt;/br&gt;
+
+.center[.b--gray.ba.bw2.ma2.pa4.shadow-1[”There was a statistically significant relationship between high school mathematics grades and university GPA ( beta = 0.44, p &lt; .001 ). The relationship was positive, suggesting that students with higher mathematics grades in high school tended to subsequently have a higher GPA in their university course.”
+]]
+---
+## Bayes Factor simple regression
+
+.center[&lt;img src = "Images2/16.png" style = "width: 100%"/&gt; ]
+.center[.b--gray.ba.bw2.ma2.pa4.shadow-1[”Bayes Factor analysis indicated that the data were 9.24*10^8 times more likely under the alternative model than the null model, providing very strong evidence in favour of a relationship between high school mathematics grades and university GPA. The posterior estimate of the regression coefficient was 0.20, with a 95% credible interval from 0.15 to 0.26.”
+]]
+&lt;/br&gt;
+---
+## Discussion
+
+&lt;/br&gt;
+
+* ###With a frequentist linear regression, we can only reject the null hypothesis, and we only get a point estimate of the regression coefficient.
+
+&lt;/br&gt;
+
+* ###With a Bayesian regression, we get a relative measure of evidence for our hypotheses, and a full (posterior) probability distribution for our regression coefficient.
+
+---
+## From simple to multiple linear regression
+
+###What about the other predictors? In particular, are SAT scores helpful in predicting GPA, above and beyond high school grades?
+
+&lt;/br&gt;
+
+* ####In the frequentist framework, we can test for the marginal effect of a predictor, while taking into account (”holding constant”) the effects of the other predictors.
+
+&lt;/br&gt;
+
+* ####With Bayes Factor for regression, we’re not directly testing effects but comparing models (i.e. different combinations of predictors).
+
+
+---
+## Frequentist multiple regression
+
+.center[&lt;img src = "Images2/17.png" style = "width: 60%"/&gt; ]
+
+.center[.b--gray.ba.bw2.ma2.pa4.shadow-1[Only 'hsm' survives as a “significant” predictor. Does that mean there is no benefit to including SAT scores?
+]]
+---
+## Bayes Factor multiple regression
+
+.pull-left[&lt;img src = "Images2/17.png" style = "width: 100%"/&gt; ]
+
+.pull-right[    
+* With 5 predictors, there are `\\(2^5\\)`=32 different models to consider. Here I am just showing the 7 best and 2 worst models (int terms of BF)
+
+&lt;/br&gt;
+
+* Note that the data were more likely under a model that only includes 'hsm' compared to a model that additionally includes 'satm':  `$$BF=\frac{9.24*10^8}{2.10*10^8}=4.41$$`]
+---
+## Bonus: "inclusion" Bayes Factor for specific effects
+
+.pull-left[&lt;img src = "Images2/18.png" style = "width: 100%"/&gt; ]
+
+&lt;/br&gt;
+.pull-right[These results are achieved through Bayesian model averaging. For example, if we average across all models that include `hsm`, and compare that to the average of all models that exclude `hsm`, the Bayes Factor is 3518 in favour of inclusion.
+]
+
+&lt;/br&gt;
+
+
+---
+
+# Further Resources
+
+Wagenmakers, EJ., Marsman, M., Jamil, T. et al. Bayesian inference for psychology. Part I: Theoretical advantages and practical ramifications. Psychon Bull Rev 25, 35–57 (2018). https://doi.org/10.3758/s13423-017-1343-3
+
+
+Wagenmakers, EJ., Love, J., Marsman, M. et al. Bayesian inference for psychology. Part II: Example applications with JASP. Psychon Bull Rev 25, 58–76 (2018). 
+https://doi.org/10.3758/s13423-017-1323-7
+
+
+Etz, A., Vandekerckhove, J. Introduction to Bayesian Inference for Psychology. Psychon Bull Rev 25, 5–34 (2018). 
+https://doi.org/10.3758/s13423-017-1262-3
+
+
+Check out this Youtube series from Mike Lawrence (mostly oriented on R) [Youtube Channel](https://www.youtube.com/watch?v=bR2YUD5EW3w&amp;list=PLu77iLvsj_GNmWqDdX-26kZ56dCZqkzBO) 
+
+
+---
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
